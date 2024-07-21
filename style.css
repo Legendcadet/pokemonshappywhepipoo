@@ -1,0 +1,11 @@
+.orange-btn {
+	background: #fc8c2a;
+	color: white;
+
+	margin-block-start: auto;
+}
+
+.orange-btn:hover {
+	background: #fc8c2a;
+	color: white;
+}
