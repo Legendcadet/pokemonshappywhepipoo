@@ -1,105 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herbal Products</title>
-    <link rel="icon" type="image/x-icon" href="./mnt/data/logo2.jpg">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cordyceps Militaris - RM Herbs</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Roboto Slab', serif;
+    }
+    .hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('mnt/data/hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .cta-button {
+      background-color: #fc8c2a;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #d47623;
+      color: white;
+    }
+    .benefit-icon {
+      max-width: 80px;
+      height: auto;
+    }
+    .product-image {
+      max-width: 300px;
+      height: auto;
+    }
+    .thumbnail {
+      max-width: 60px;
+      height: auto;
+      cursor: pointer;
+    }
+    .social-icon {
+      width: 20px;
+      height: 20px;
+    }
+    .orange-btn {
+	background: #fc8c2a;
+	color: white;
+
+	margin-block-start: auto;
+    }
+
+    .orange-btn:hover {
+        background: #fc8c2a;
+        color: white;
+    }
+    .highlight {
+        font-weight: bold;
+        color: #fc8c2a;
+    }
+
+  </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container container-fluid">
-            <a class="navbar-brand" href="#">RM Herbs</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">RM Herbs</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="/products.html">Products</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content text-center">
+        <h1 class="display-4">The Power of Cordyceps Militaris</h1>
+        <p class="lead">Experience the natural health benefits of this remarkable mushroom.</p>
+        <a href="#product" class="cta-button">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about py-5" id="about">
+    <div class="container">
+      <h2 class="text-center mb-4">About Cordyceps Militaris</h2>
+      <p class="text-center mb-5">Cordyceps Militaris is a rare and valuable medicinal mushroom known for its numerous health benefits. It has been used in traditional Chinese medicine for centuries and is now gaining popularity worldwide.</p>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="mnt/data/energy.png" class="card-img-top benefit-icon mx-auto mt-3" alt="Energy">
+            <div class="card-body">
+              <h3 class="card-title">Boosts Energy</h3>
+              <p class="card-text">Cordyceps Militaris can help increase energy levels and reduce fatigue.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="mnt/data/immunity.png" class="card-img-top benefit-icon mx-auto mt-3" alt="Immunity">
+            <div class="card-body">
+              <h3 class="card-title">Supports Immunity</h3>
+              <p class="card-text">It contains compounds that can help strengthen the immune system.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="mnt/data/performance.png" class="card-img-top benefit-icon mx-auto mt-3" alt="Performance">
+            <div class="card-body">
+              <h3 class="card-title">Enhances Performance</h3>
+              <p class="card-text">Cordyceps Militaris may improve athletic performance and endurance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product py-5 bg-light" id="product">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Cordyceps Militaris Product</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <img src="mnt/data/product1.jpg" alt="Cordyceps Militaris Product 1" class="img-fluid mb-3 product-image mx-auto d-block" id="main-image">
+          <!-- <div class="row justify-content-center">
+            <div class="col-3">
+              <img src="product1.jpg" alt="Cordyceps Militaris Product 1" class="img-thumbnail thumbnail" onclick="document.getElementById('main-image').src=this.src">
+            </div>
+            <div class="col-3">
+              <img src="product2.jpg" alt="Cordyceps Militaris Product 2" class="img-thumbnail thumbnail" onclick="document.getElementById('main-image').src=this.src">
+            </div>
+          </div> -->
+        </div>
+        <div class="col-md-6">
+          <h3>Cordyceps Militaris ( कीड़ा जड़ी )</h3>
+          <p><em>One solution for boosting energy and immunity.</em></p>
+          <h4>Product Description</h4>
+          <ul>
+            <li> Cordyceps militaris give relief in asthma sugar kidney patients.</li>
+            <li> <strong>Energy Booster</strong>: One of the active ingredients of Cordyceps Militaris mushroom, adenosine and cordycepin play key Role in Increasing ATP Production and profoundly improving health, longevity, vitality, and physical performance.</li>
+            <li> Anti-inflammatory and Antioxidant properties make it one of the most effective mushrooms available.</li>
+            <li> Enhances Immunity, Strength and Energy.</li>
+          </ul>
+          <a href="#contact" target="_blank" class="btn orange-btn mb-3">Contact</a>
+                    <!-- <section>
+                        Share:
+                        <a class="" href="https://wa.me//send?text=Info on Cordyceps Militaris">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                              <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                            </svg>
+                        </a>
+                    </section> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+              What are the benefits of Cordyceps Militaris?
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="ms-auto navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Home Section -->
-    <section id="home" class="py-5">
-        <div class="container text-center">
-            <img src="mnt/data/logo2.jpg" alt="RM Herbs Logo" class="mb-4 img-fluid w-25">
-            <h1>Welcome to RM Herbs</h1>
-            <p>Your source for high-quality herbal products</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
-        <div class="container">
-            <h2>About Us</h2>
-    <p>RM Herbs is an exciting new venture in the world of medicinal herbs, launched in 2024 by Dinesh Pant. Our mission is to provide high-quality, ethically sourced herbs to support natural wellness. As a fresh face in the industry, we combine traditional herbal wisdom with modern scientific understanding to offer a carefully curated selection of potent herbs and custom blends. RM Herbs is committed to transparency, sustainability, and customer education, aiming to empower individuals to explore the benefits of herbal remedies.</p>
-            <!-- <h3>Benefits of Cordyceps Militaris</h3>
-            <ul>
-                <li>Kidney function support</li>
-                <li>Lung health</li>
-                <li>Energy boost</li>
-                <li>And many more...</li>
-            </ul> -->
-        </div>
-    </section>
-
-    <!-- Products Section -->
-   <!--  <section id="products" class="py-5">
-        <div class="container">
-            <h2>Our Products</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="mnt/data/1000044750.jpg" alt="Cordyceps Militaris" class="img-fluid">
-                </div>
-                <div class="col-md-6">
-                    <h3>Cordyceps Militaris</h3>
-                    <p>One solution for boosting energy and immunity.</p>
-                    <h4>Ingredients</h4>
-                    <ul>
-                        <li>Glucose</li>
-                        <li>Vitamin B12</li>
-                        <li>Yeast Extract</li>
-                        <li>Brown Rice</li>
-                        <li>Vitamin B1</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- How to Use Section -->
-    <!-- <section id="how-to-use" class="py-5">
-        <div class="container">
-            <h2>How to Use</h2>
-            <p>Take 6-8 dried strands of Cordyceps Militaris into an empty glass. Pour boiled hot water in it and cover it for 5-10 minutes. Drink it and chew the strands properly.</p>
-            <p>Consult a physician in case of pregnancy or any other medical condition. Not recommended for people with autoimmune diseases. Don't use below 5 years.</p>
-        </div>
-    </section> -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p><strong>Phone</strong>: +918178928850</p>
-            <p><strong>Address</strong>: L-101/1, Block-I, Vijay Vihar Phase-2, Rohini Sector-7 Rohini, North West, Delhi-110085</p>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <p>
+                    <span class="highlight">Cordyceps Militaris</span> is renowned for its ability to <span class="highlight">boost immunity function</span>, making it a potent ally in maintaining overall health. It helps to <span class="highlight">balance blood sugar levels</span>, which is essential for preventing and managing diabetes. Additionally, it has <span class="highlight">anti-cancer benefits</span> and <span class="highlight">anti-tumor properties</span>, making it a valuable supplement in supporting long-term wellness.
+                </p>
             
+                <p>
+                    This powerful fungus also contributes to <span class="highlight">improved heart health</span> and <span class="highlight">cholesterol reduction</span>, which are vital for cardiovascular well-being. It helps in <span class="highlight">detoxifying the body</span> and <span class="highlight">reducing skin problems</span>, promoting a clearer and healthier complexion. Moreover, Cordyceps Militaris is known to <span class="highlight">increase energy levels</span> and <span class="highlight">improve brain function</span>, enhancing both physical and mental performance.
+                </p>
+            
+                <p>
+                    For those concerned with reproductive health, it is worth noting that Cordyceps Militaris may <span class="highlight">reduce the risk of infertility</span>. It also supports <span class="highlight">weight loss</span> efforts and helps individuals <span class="highlight">cope with depression</span> by balancing mood and energy levels. Furthermore, its ability to <span class="highlight">support multiple organ function</span> underscores its role as a comprehensive health supplement.
+                </p>
+            </div>
+          </div>
         </div>
-    </section>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              How do I take Cordyceps Militaris?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <li>➤ <strong>Prepare the Ingredients</strong>: Gather 6-8 Cordyceps fruit bodies.</li>
+                <li>➤ <strong>Measure the Water</strong>: Pour 200-250 ml of water into a pot.</li>
+                <li>➤ <strong>Boil</strong>: Add the Cordyceps to the water and bring to a boil. Keep boiling for 1 minute.</li>
+                <li>➤ <strong>Simmer</strong>: Reduce the heat to the lowest setting, cover the pot with a lid, and let it simmer for 14-15 minutes.</li>
+                <li>➤ <strong>Serve</strong>: Enjoy your Cordyceps tea, ideally after meals.</li>
+                <li>➤ <strong>Frequency</strong>: For best results, consume the tea twice daily.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+              Is Cordyceps Militaris safe?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Cordyceps Militaris is generally considered safe when taken in recommended doses. However, it's always best to consult with a healthcare professional before starting any new supplement regimen.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p><strong>Phone</strong>: +918178928850</p>
+        <p><strong>Address</strong>: L-101/1, Block-I, Vijay Vihar Phase-2, Rohini Sector-7 Rohini, North West, Delhi-110085</p>
+        
+    </div>
+  </section>
+  
     <!-- Footer -->
-    <footer class="py-4 bg-light text-center">
-        <div class="container">
-            <p>&copy; 2024 RM Herbs. All rights reserved.</p>
-        </div>
-    </footer>
+  <footer class="py-4 text-center">
+      <div class="container">
+          <p>&copy; 2024 RM Herbs. All rights reserved.</p>
+      </div>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
